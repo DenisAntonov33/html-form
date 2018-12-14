@@ -4,11 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/media.css">
 </head>
 <body>
 	<div class="container">
 		<div class="container__language language">
-			<select>
+			<div class="toggle toggle_small-screen">
+				<input id="en" type="radio" name="lang" checked><label class="toggle__btn" for="en">en</label>
+				<input id="ru" type="radio" name="lang"><label class="toggle__btn" for="ru">ru</label>
+				<input id="ar" type="radio" name="lang"><label class="toggle__btn" for="ar">ar</label>
+			</div>
+			<select class="toggle toggle_full-screen">
 				<option>en</option>
 				<option>ru</option>
 				<option>ar</option>
@@ -22,7 +28,7 @@
 			<div class="field field_full-width"><label for="">company:</label><input type="text"></label></div>
 			<div class="field field_full-width"><label for="">city*:</label><input type="text"></label></div>
 			<div class="field field_full-width"><label for="">message*:</label><input type="text"></label></div>
-			<button class="form__btn btn" type="submit">Send</button>
+			<button class="form__btn btn btn_full-screen btn_small-screen" type="submit">Send</button>
 		</form>
 	</div>
 </body>

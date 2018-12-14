@@ -1,0 +1,57 @@
+@media all and (max-width: 900px) {
+
+	.toggle {
+		&_full-screen {
+			display: none;
+		}
+
+		&_small-screen {
+			display: block;
+
+			input {
+				display: none;
+			}
+		}
+		&__btn {
+			background-color: rgb(82,114,252);
+			color: #fff;
+			display: inline-block;
+			font-weight: lighter;
+			height: 25px;
+			text-align: center;
+			text-decoration: underline;
+			width: 40px;
+
+
+		}
+	}
+	.btn {
+		&_full-screen {
+			width: 100%;
+		}
+	}
+
+	.field {
+		&_half-width {
+			width: 100%;
+
+				label {
+					width: 80px;
+				}
+				input {
+					width: 85%;
+				}
+		}
+	}
+
+	input[type="radio"]:checked + label {
+		background-color: #fff;
+		color: #000;
+		text-decoration: none;
+	}
+
+}
+
+
+
+

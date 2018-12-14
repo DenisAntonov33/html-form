@@ -5,23 +5,28 @@ body {
 }
 
 .container {
-	width: 600px;
 	background-color: lightgrey;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin: 0 auto;
+	width: 600px;
 	&__language {
 		padding-top: 15px;
-		width: 20px;
-		margin: 0 auto;
 	}
-	&__title {
-		margin: 0 auto;
-		text-align: center;
+}
+
+.toggle {
+	&_small-screen {
+		display: none;
+	}
+	&_full-screen {
+		width: 40px;
 	}
 }
 
 .form {
 	padding: 0;
-	margin: 0 auto;
 	width: 95%;
 	padding-bottom: 10px;
 
@@ -31,7 +36,6 @@ body {
 }
 
 .field {
-	box-sizing: border-box;
 	margin-bottom: 10px;
 	label,
 	input {
@@ -46,21 +50,23 @@ body {
 			margin-right: 1px;
 		}
 		label {
+			height: 100%;
 			width: 80px;
 		}
 		input {
+			height: 40px;
 			width: 69%;
 		}
 	}
 
 	&_full-width {
-		box-sizing: border-box;
 		display: block;
 		width: 100%;
 		label {
 			width: 80px;
 		}
 		input {
+			height: 30px;
 			width: 85%;
 		}
 	}
@@ -70,7 +76,10 @@ body {
 .btn {
 	background-color: rgb(182,193,220);
 	display: block;
-	width: 60px;
 	height: 30px;
 	box-shadow: 1px 1px 0 0;
+
+	&_full-screen {
+		width: 60px;
+	}
 }
