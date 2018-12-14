@@ -42,6 +42,10 @@ body {
 		display: inline-block;
 	}
 
+	&_error {
+		border: 1px solid red;
+	}
+
 	&_half-width {
 		box-sizing: border-box;
 		display: inline-block;
@@ -50,12 +54,14 @@ body {
 			margin-right: 1px;
 		}
 		label {
+			display: inline-block;
 			height: 100%;
 			width: 80px;
 		}
 		input {
+			display: inline-block;
 			height: 40px;
-			width: 69%;
+			width: 60%;
 		}
 	}
 
@@ -63,16 +69,18 @@ body {
 		display: block;
 		width: 100%;
 		label {
+			display: inline-block;
 			width: 80px;
 		}
 		input {
+			display: inline-block;
 			height: 30px;
-			width: 85%;
+			width: 80%;
 		}
 
 		textarea {
 			box-sizing: border-box;
-			width: 488.5px;
+			width: 80.5%;
 		}
 	}
 }
@@ -87,4 +95,24 @@ body {
 	&_full-screen {
 		width: 60px;
 	}
+}
+
+.message {
+	display: flex;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	width: 94%;
+
+	&_error {
+		background-color: rgb(230,210,214);
+	}
+
+	&_success {
+		background-color: rgb(222,236,246);
+	}
+}
+
+.hidden {
+	display: none;
 }

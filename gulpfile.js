@@ -9,6 +9,12 @@ gulp.task("html", function() {
 	.pipe(browserSync.reload({stream: true}))
 });
 
+gulp.task("js", function() {
+	return gulp.src("src/index.js")
+	.pipe(gulp.dest("dist"))
+	.pipe(browserSync.reload({stream: true}))
+});
+
 gulp.task("style", function () {
 	return gulp.src("src/styles/**/*")
 	.pipe(sass())
@@ -26,7 +32,8 @@ gulp.task("server", function () {
 
 gulp.task("watch", function() {
 	gulp.watch("src/index.html", gulp.parallel("html"));
+	gulp.watch("src/index.js", gulp.parallel("js"));
 	gulp.watch("src/styles/**/*", gulp.parallel("style"));
 })
 
-gulp.task("default", gulp.parallel("watch", "html", "style", "server"))
+gulp.task("default", gulp.parallel("watch", "html", "js", "style", "server"))

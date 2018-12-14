@@ -21,17 +21,40 @@
 			</select>
 		</div>
 		<h1 class="container__title">Form title</h1>
-		<form class="form">
-			<div class="field field_half-width"><label for="">first name*:</label><input type="text"></div>
-			<div class="field field_half-width"><label for="">last name*:</label><input type="text"></div>
-			<div class="field field_full-width"><label for="">email*:</label><input type="text"></div>
-			<div class="field field_full-width"><label for="">company:</label><input type="text"></div>
-			<div class="field field_full-width"><label for="">city*:</label><input type="text"></div>
-			<div class="field field_full-width">
-				<label for="">message*:</label><textarea type="text" rows="4"></textarea>
+
+      <div class="message message_error hidden">Error...</div>
+      <div class="message message_success hidden">Success!</div>
+
+		<form class="form" id="form">
+			<div class="field field_half-width">
+				<label for="">first name*:</label>
+				<input type="text" data-validation="required" class="">
 			</div>
-			<button class="form__btn btn btn_full-screen btn_small-screen" type="submit">Send</button>
+			<div class="field field_half-width">
+				<label for="">last name*:</label>
+				<input type="text" data-validation="required">
+			</div>
+			<div class="field field_full-width">
+				<label for="">email*:</label>
+				<input type="text" data-validation="required email">
+			</div>
+			<div class="field field_full-width">
+				<label for="">company:</label>
+				<input type="text" data-validation="required">
+			</div>
+			<div class="field field_full-width">
+				<label for="">city*:</label>
+				<input type="text" data-validation="required">
+			</div>
+			<div class="field field_full-width">
+				<label for="">message*:</label>
+				<textarea type="text" rows="4"></textarea>
+			</div>
+			<button class="form__btn btn btn_full-screen btn_small-screen"
+					type="submit">Send</button>
 		</form>
 	</div>
+
+	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
