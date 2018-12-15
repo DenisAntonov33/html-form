@@ -1,24 +1,26 @@
-var validations = {
+const validations = {
   required: function(value){
     return value !== '';
   },
   email: function(value){
-    return value.match(/^[a-zA-Z][\w\-_]+@[\w\d\.\-\_]+[\.]+\w{2,3}$/);
+    return value.match(/^[a-z][\w\-_]+@[\w\d\.\-\_]+[\.]+\w{2,3}$/i);
   }
 }
 function validate() {
-  var form = document.getElementById('form'),
-      inputsArr = form.querySelectorAll('input'),
+  const form = document.getElementById('form'),
+      inputsArr = form.querySelectorAll('[data-validation]'),
       errorMessage = document.querySelector(".message_error"),
       successMessage = document.querySelector(".message_success");
-  
+
   form.addEventListener('submit', function(e){
-    var i = 0;
-    while (i < inputsArr.length) {
-      var attr = inputsArr[i].getAttribute('data-validation'),
-          rules = attr ? attr.split(' ') : '',
-          j = 0;
-      while (j < rules.length) {
+
+    for (let i = 0; i < inputsArr.length; i++) {
+
+      let attr = inputsArr[i].getAttribute('data-validation'),
+          rules = attr ? attr.split(' ') : '';
+
+      for (let j = 0; j < rules.length; j++) {
+
         if(!validations[rules[j]](inputsArr[i].value)) {
           e.preventDefault();
           errorMessage.className = "message message_error";
@@ -28,12 +30,10 @@ function validate() {
         }
         errorMessage.className = "message message_error hidden";
         inputsArr[i].className = "";
-        j++;
       }
-      i++;
     }
     e.preventDefault();
     successMessage.className = "message message_success";
-  }, false)
+  })
 }
 validate();

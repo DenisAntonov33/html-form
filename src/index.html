@@ -22,10 +22,9 @@
 		</div>
 		<h1 class="container__title">Form title</h1>
 
-      <div class="message message_error hidden">Error...</div>
-      <div class="message message_success hidden">Success!</div>
-
 		<form class="form" id="form">
+	      <div class="message message_error hidden">Error...</div>
+	      <div class="message message_success hidden">Success!</div>
 			<div class="field field_half-width">
 				<label for="">first name*:</label>
 				<input type="text" data-validation="required" class="">
@@ -40,7 +39,7 @@
 			</div>
 			<div class="field field_full-width">
 				<label for="">company:</label>
-				<input type="text" data-validation="required">
+				<input type="text">
 			</div>
 			<div class="field field_full-width">
 				<label for="">city*:</label>
@@ -48,7 +47,7 @@
 			</div>
 			<div class="field field_full-width">
 				<label for="">message*:</label>
-				<textarea type="text" rows="4"></textarea>
+				<textarea type="text" rows="4" data-validation="required"></textarea>
 			</div>
 			<button class="form__btn btn btn_full-screen btn_small-screen"
 					type="submit">Send</button>
