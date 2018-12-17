@@ -1,3 +1,5 @@
+var arr = require('./translation.js');
+
 const validations = {
   required: function(value){
     return value !== '';
@@ -10,7 +12,7 @@ function validate() {
   const form = document.getElementById('form'),
       inputsArr = form.querySelectorAll('[data-validation]'),
       errorMessage = document.querySelector(".message_error"),
-      successMessage = document.querySelector(".message_success");
+      successMessage = document.querySelector('.message_success');
 
   form.addEventListener('submit', function(e){
 
@@ -23,17 +25,19 @@ function validate() {
 
         if(!validations[rules[j]](inputsArr[i].value)) {
           e.preventDefault();
-          errorMessage.className = "message message_error";
+          errorMessage.className = 'message message_error';
           errorMessage.innerHTML = "Invalid rule '" + rules[j] + "' for input '" + inputsArr[i].name + "'";
-          inputsArr[i].className = "field_error";
+          inputsArr[i].className = 'field_error';
+          successMessage.className = 'message message_success hidden';
           return false;
         }
-        errorMessage.className = "message message_error hidden";
-        inputsArr[i].className = "";
+        errorMessage.className = 'message message_error hidden';
+        inputsArr[i].className = '';
       }
     }
     e.preventDefault();
-    successMessage.className = "message message_success";
+    successMessage.className = 'message message_success';
   })
 }
 validate();
+

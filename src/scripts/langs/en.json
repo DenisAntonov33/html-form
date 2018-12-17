@@ -1,0 +1,10 @@
+{
+	"form-title": "Form title",
+	"first-name": "first name*:",
+	"last-name": "last-name*:",
+	"email": "email*:",
+	"city": "city*:",
+	"company": "company:",
+	"message": "message*:",
+	"send": "Send"
+}

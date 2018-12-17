@@ -9,48 +9,49 @@
 <body>
 	<div class="container">
 		<div class="container__language language">
-			<div class="toggle toggle_small-screen">
-				<input id="en" type="radio" name="lang" checked><label class="toggle__btn" for="en">en</label>
-				<input id="ru" type="radio" name="lang"><label class="toggle__btn" for="ru">ru</label>
+			<div class="toggle toggle_small-screen" toggle-id="j-locale-toggle">
+				<input id="en" type="radio" name="lang" value="en" checked><label class="toggle__btn" for="en">en</label>
+				<input id="ru" type="radio" name="lang" value="ru"><label class="toggle__btn" for="ru">ru</label>
 				<input id="ar" type="radio" name="lang"><label class="toggle__btn" for="ar">ar</label>
 			</div>
-			<select class="toggle toggle_full-screen">
+			<select class="toggle toggle_full-screen" toggle-id="j-locale-toggle">
 				<option>en</option>
 				<option>ru</option>
 				<option>ar</option>
 			</select>
 		</div>
-		<h1 class="container__title">Form title</h1>
+		<h1 class="container__title" elem-lang-id="form-title">Form title</h1>
 
 		<form class="form" id="form">
 	      <div class="message message_error hidden">Error...</div>
 	      <div class="message message_success hidden">Success!</div>
 			<div class="field field_half-width">
-				<label for="">first name*:</label>
+				<label for="" elem-lang-id="first-name">first name*:</label>
 				<input type="text" data-validation="required" class="">
 			</div>
 			<div class="field field_half-width">
-				<label for="">last name*:</label>
+				<label for="" elem-lang-id="last-name">last name*:</label>
 				<input type="text" data-validation="required">
 			</div>
 			<div class="field field_full-width">
-				<label for="">email*:</label>
+				<label for="" elem-lang-id="email">email*:</label>
 				<input type="text" data-validation="required email">
 			</div>
 			<div class="field field_full-width">
-				<label for="">company:</label>
+				<label for="" elem-lang-id="company">company:</label>
 				<input type="text">
 			</div>
 			<div class="field field_full-width">
-				<label for="">city*:</label>
+				<label for="" elem-lang-id="city">city*:</label>
 				<input type="text" data-validation="required">
 			</div>
 			<div class="field field_full-width">
-				<label for="">message*:</label>
+				<label for="" elem-lang-id="message">message*:</label>
 				<textarea type="text" rows="4" data-validation="required"></textarea>
 			</div>
 			<button class="form__btn btn btn_full-screen btn_small-screen"
-					type="submit">Send</button>
+					type="submit"
+					elem-lang-id="send">Send</button>
 		</form>
 	</div>
 

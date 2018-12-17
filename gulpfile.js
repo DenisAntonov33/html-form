@@ -1,6 +1,7 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var browserSync = require("browser-sync");
+const gulp = require("gulp"),
+sass = require("gulp-sass"),
+browserSync = require("browser-sync"),
+webpack = require("webpack-stream");
 
 
 gulp.task("html", function() {
@@ -10,7 +11,12 @@ gulp.task("html", function() {
 });
 
 gulp.task("js", function() {
-	return gulp.src("src/index.js")
+	return gulp.src("src/scripts/**/*.js")
+	.pipe(webpack({
+		output: {
+		    filename: 'index.js',
+		},
+	 }))
 	.pipe(gulp.dest("dist"))
 	.pipe(browserSync.reload({stream: true}))
 });
@@ -32,7 +38,7 @@ gulp.task("server", function () {
 
 gulp.task("watch", function() {
 	gulp.watch("src/index.html", gulp.parallel("html"));
-	gulp.watch("src/index.js", gulp.parallel("js"));
+	gulp.watch("src/**/*.js", gulp.parallel("js"));
 	gulp.watch("src/styles/**/*", gulp.parallel("style"));
 })
 
