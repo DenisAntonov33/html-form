@@ -6,13 +6,16 @@
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/media.css">
 </head>
-<body>
+<body class="">
 	<div class="container">
 		<div class="container__language language">
 			<div class="toggle toggle_small-screen" toggle-id="j-locale-toggle">
-				<input id="en" type="radio" name="lang" value="en" checked><label class="toggle__btn" for="en">en</label>
-				<input id="ru" type="radio" name="lang" value="ru"><label class="toggle__btn" for="ru">ru</label>
-				<input id="ar" type="radio" name="lang"><label class="toggle__btn" for="ar">ar</label>
+				<input id="en" type="radio" name="lang" value="en" checked>
+				<label class="toggle__btn" for="en">en</label>
+				<input id="ru" type="radio" name="lang" value="ru">
+				<label class="toggle__btn" for="ru">ru</label>
+				<input id="ar" type="radio" name="lang" value="ar">
+				<label class="toggle__btn" for="ar">ar</label>
 			</div>
 			<select class="toggle toggle_full-screen" toggle-id="j-locale-toggle">
 				<option>en</option>
@@ -23,31 +26,34 @@
 		<h1 class="container__title" elem-lang-id="form-title">Form title</h1>
 
 		<form class="form" id="form">
-	      <div class="message message_error hidden">Error...</div>
+	      <div class="message message_error hidden"></div>
 	      <div class="message message_success hidden">Success!</div>
 			<div class="field field_half-width">
 				<label for="" elem-lang-id="first-name">first name*:</label>
-				<input type="text" data-validation="required" class="">
+				<input type="text" data-validation="required" name="first name">
 			</div>
 			<div class="field field_half-width">
 				<label for="" elem-lang-id="last-name">last name*:</label>
-				<input type="text" data-validation="required">
+				<input type="text" data-validation="required" name="last name">
 			</div>
 			<div class="field field_full-width">
 				<label for="" elem-lang-id="email">email*:</label>
-				<input type="text" data-validation="required email">
+				<input type="email" data-validation="required email" name="email">
 			</div>
 			<div class="field field_full-width">
 				<label for="" elem-lang-id="company">company:</label>
-				<input type="text">
+				<input type="text" name="company">
 			</div>
 			<div class="field field_full-width">
 				<label for="" elem-lang-id="city">city*:</label>
-				<input type="text" data-validation="required">
+				<input type="text" data-validation="required" name="city">
 			</div>
 			<div class="field field_full-width">
 				<label for="" elem-lang-id="message">message*:</label>
-				<textarea type="text" rows="4" data-validation="required"></textarea>
+				<textarea 	type="text"
+							rows="4" 
+							data-validation="required" 
+							name="message"></textarea>
 			</div>
 			<button class="form__btn btn btn_full-screen btn_small-screen"
 					type="submit"

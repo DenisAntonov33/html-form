@@ -93,7 +93,7 @@ body {
 	box-shadow: 1px 1px 0 0;
 
 	&_full-screen {
-		width: 60px;
+		width: 90px;
 	}
 }
 
@@ -115,4 +115,8 @@ body {
 
 .hidden {
 	display: none;
+}
+
+.arabic {
+	direction: rtl;
 }

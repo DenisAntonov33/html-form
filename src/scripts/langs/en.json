@@ -6,5 +6,8 @@
 	"city": "city*:",
 	"company": "company:",
 	"message": "message*:",
-	"send": "Send"
+	"send": "Send",
+	"sucsMesg": "Send",
+	"errMesg": "Send",
+	"direction": "ltl"
 }
